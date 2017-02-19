@@ -31,7 +31,7 @@ github "martinbanas/logging" ~> 1.0.0
 #### Swift 3.0.x
 
 ```
-github "martinbanas/logging" ~> "2.0.0"
+github "martinbanas/logging" "2.0.0"
 ```
 
 Make sure to setup the `carthage copy-frameworks` `Run Script` build phase for Carthage dependencies in your project.

@@ -34,13 +34,13 @@ class LoggingTests: XCTestCase {
         
         let message = logger.lastLog!
         
-        XCTAssert(message.containsString(closure), "should contain closure string")
+        XCTAssert(message.contains(closure), "should contain closure string")
         
-        XCTAssert(message.containsString(functionName), "should contain function name")
+        XCTAssert(message.contains(functionName), "should contain function name")
         
-        XCTAssert(message.containsString(fileName), "should contain file name")
+        XCTAssert(message.contains(fileName), "should contain file name")
         
-        XCTAssert(message.containsString(lineNumber), "should contain line number")
+        XCTAssert(message.contains(lineNumber), "should contain line number")
         
     }
 }
