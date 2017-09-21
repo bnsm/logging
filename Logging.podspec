@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/martinbanas/logging"
   s.license          = 'MIT'
   s.author           = 'Logging Contributors'
-  s.source           = { :git => "https://github.com/martinbanas/logging.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/martinbanas/logging.git", :branch => "feature/swift3" }
 
   s.source_files = 'Sources/**/*.{swift,h}'
   s.ios.deployment_target = '9.0'
