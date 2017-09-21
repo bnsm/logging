@@ -17,30 +17,24 @@ class LoggingTests: XCTestCase {
         
         logger = LoggingMock()
     }
+
+    func test_default_parameters() {
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func test__default_parameters() {
-        
         let closure = "test"
-        let functionName = "test__default_parameters"
+        let functionName = "test_default_parameters"
         let fileName = "LoggingTests"
-        let lineNumber = "33"
+        let lineNumber = "28"
         
         logger.alert(closure)
         
         let message = logger.lastLog!
         
-        XCTAssert(message.containsString(closure), "should contain closure string")
+        XCTAssertTrue(message.contains(closure), "should contain closure string")
         
-        XCTAssert(message.containsString(functionName), "should contain function name")
+        XCTAssertTrue(message.contains(functionName), "should contain function name")
         
-        XCTAssert(message.containsString(fileName), "should contain file name")
+        XCTAssertTrue(message.contains(fileName), "should contain file name")
         
-        XCTAssert(message.containsString(lineNumber), "should contain line number")
-        
+        XCTAssertTrue(message.contains(lineNumber), "should contain line number")
     }
 }
