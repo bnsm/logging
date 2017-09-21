@@ -38,7 +38,7 @@ Make sure to setup the `carthage copy-frameworks` `Run Script` build phase for C
 ### CocoaPods
 To install logging with CocoaPods, add the following lines to your Podfile.
 
-#### Swift 3.0.x
+#### Swift 3.x
 
 ```
 platform :ios, '9.0' # or platform :tvos, or platform :osx, or platform :watchos
