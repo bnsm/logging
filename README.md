@@ -2,7 +2,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![pod compatible](https://img.shields.io/badge/pod-compatible-4BC51D.svg?style=flat)](https://cocoapods.org)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)](https://github.com/martinbanas/logging)
-[![Platforms](https://img.shields.io/badge/platform-iOS%20%7C%20tvOS-lightgrey.svg)](https://github.com/martinbanas/logging)
+[![Platforms](https://img.shields.io/badge/platform-iOS%20%7C%20tvOS%20%7C%20macOS%20%7C%20watchOS-lightgrey.svg)](https://github.com/martinbanas/logging)
 [![Swift Version](https://img.shields.io/badge/Swift-3.x-F16D39.svg?style=flat)](https://developer.apple.com/swift)
 
 Logging
@@ -41,7 +41,7 @@ To install logging with CocoaPods, add the following lines to your Podfile.
 #### Swift 3.0.x
 
 ```
-platform :ios, '9.0' # or platform :tvos, or platform :osx, or platform :tvos, or platform :watchos
+platform :ios, '9.0' # or platform :tvos, or platform :osx, or platform :watchos
 use_frameworks!
 
 pod 'Logging', :git => 'https://github.com/martinbanas/logging.git', :tag => '3.0.0'
