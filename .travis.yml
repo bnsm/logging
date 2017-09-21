@@ -11,7 +11,7 @@ env:
         - pod lib lint
       - env: PROJECT_FILE="$LIB_PROJECT"       DESTINATION="OS=10.3.1,name=iPhone 7"             SCHEME="Logging-iOS"                SDK="iphonesimulator"        BUILDCMD="clean test build"
       - env: PROJECT_FILE="$LIB_PROJECT"       DESTINATION="OS=10.0,name=Apple TV 1080p"         SCHEME="Logging-tvOS"               SDK="appletvsimulator"       BUILDCMD="clean test build" 
-      - env: PROJECT_FILE="$LIB_PROJECT"       DESTINATION="OS=3.2,name=Apple Watch - 42mm"      SCHEME="Logging-watchOS"            SDK="watchsimulator"         BUILDCMD="clean test build" 
+      - env: PROJECT_FILE="$LIB_PROJECT"       DESTINATION="OS=3.2,name=Apple Watch - 42mm"      SCHEME="Logging-watchOS"            SDK="watchsimulator"         BUILDCMD="clean build" 
       - env: PROJECT_FILE="$LIB_PROJECT"       DESTINATION="arch=x86_64"                         SCHEME="Logging-macOS"              SDK="macosx"                 BUILDCMD="clean test build"  
   script:
   - set -o pipefail
