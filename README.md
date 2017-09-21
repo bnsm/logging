@@ -8,7 +8,7 @@
 Logging
 ========
 
-An standard interface for message logging.
+A standard interface for message logging.
 
 Working on various projects and frameworks you may need to use a separation betwen logic that generates messages and the logic that reports them. Logging provides a standard interface which could be easily extended or subclassed by any already existing logger.
 
