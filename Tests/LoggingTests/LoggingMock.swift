@@ -12,50 +12,50 @@ import Foundation
 
 private enum Severity: String {
     
-    case Alert
-    case Critical
-    case Error
-    case Warning
-    case Notice
-    case Information
-    case Debug
+    case alert
+    case critical
+    case error
+    case warning
+    case notice
+    case information
+    case debug
 }
 
 class LoggingMock: Logging {
     
     private(set) var lastLog: String?
     
-    func alert(@autoclosure closure: () -> Any?, functionName: StaticString, fileName: StaticString, lineNumber: Int) {
-        log(.Alert, closure: closure, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
+    func alert(_ closure: @autoclosure () -> Any?, functionName: StaticString, fileName: StaticString, lineNumber: Int) {
+        log(.alert, closure: closure, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
     }
     
-    func critical(@autoclosure closure: () -> Any?, functionName: StaticString, fileName: StaticString, lineNumber: Int) {
-        log(.Critical, closure: closure, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
+    func critical(_ closure: @autoclosure () -> Any?, functionName: StaticString, fileName: StaticString, lineNumber: Int) {
+        log(.critical, closure: closure, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
     }
     
-    func error(@autoclosure closure: () -> Any?, functionName: StaticString, fileName: StaticString, lineNumber: Int) {
-        log(.Error, closure: closure, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
+    func error(_ closure: @autoclosure () -> Any?, functionName: StaticString, fileName: StaticString, lineNumber: Int) {
+        log(.error, closure: closure, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
     }
     
-    func warning(@autoclosure closure: () -> Any?, functionName: StaticString, fileName: StaticString, lineNumber: Int) {
-        log(.Warning, closure: closure, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
+    func warning(_ closure: @autoclosure () -> Any?, functionName: StaticString, fileName: StaticString, lineNumber: Int) {
+        log(.warning, closure: closure, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
     }
     
-    func notice(@autoclosure closure: () -> Any?, functionName: StaticString, fileName: StaticString, lineNumber: Int) {
-        log(.Notice, closure: closure, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
+    func notice(_ closure: @autoclosure () -> Any?, functionName: StaticString, fileName: StaticString, lineNumber: Int) {
+        log(.notice, closure: closure, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
     }
     
-    func info(@autoclosure closure: () -> Any?, functionName: StaticString, fileName: StaticString, lineNumber: Int) {
-        log(.Information, closure: closure, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
+    func info(_ closure: @autoclosure () -> Any?, functionName: StaticString, fileName: StaticString, lineNumber: Int) {
+        log(.information, closure: closure, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
     }
     
-    func debug(@autoclosure closure: () -> Any?, functionName: StaticString, fileName: StaticString, lineNumber: Int){
-        log(.Debug, closure: closure, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
+    func debug(_ closure: @autoclosure () -> Any?, functionName: StaticString, fileName: StaticString, lineNumber: Int){
+        log(.debug, closure: closure, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
     }
     
     // MARK: Private
     
-    private func log(level: Severity, @autoclosure closure: () -> Any?, functionName: StaticString, fileName: StaticString, lineNumber: Int) {
+    private func log(_ level: Severity, closure: @autoclosure () -> Any?, functionName: StaticString, fileName: StaticString, lineNumber: Int) {
 
         guard let closureResult = closure() else { return }
         
