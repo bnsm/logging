@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Logging"
-  s.version          = "3.0.0"
+  s.version          = "4.0.0"
   s.summary          = "A standard interface for message logging."
   s.description      = <<-DESC
                        Working on various projects and frameworks you may need to use a separation betwen logic that generates messages and the logic that reports them. Logging provides a standard interface which could be easily extended or subclassed by any already existing logger.
